@@ -1,7 +1,7 @@
 chrome.omnibox.onInputEntered.addListener(
   function(domain) {
       
-        if (domain.indexOf('.') === false)
+        if (domain.indexOf('.') < 0)
         {
             domain = domain + '.com';
         }
