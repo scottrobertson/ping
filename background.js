@@ -21,6 +21,13 @@ chrome.omnibox.onInputEntered.addListener(
 				  title + ' is Down',  // notification title
 				  'This website apears to be down. Check www.isup.me for status'  // notification body text
 				);
+                
+                chrome.tabs.create({'url': "http://isup.me/" + domain}, function(tab) {
+                    return true;
+                });
+                
+                
+                
   			} else {
 
   				var notification = webkitNotifications.createNotification(
