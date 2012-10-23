@@ -1,6 +1,11 @@
 chrome.omnibox.onInputEntered.addListener(
   function(domain) {
-    	
+      
+        if (domain.indexOf('.') === false)
+        {
+            domain = domain + '.com';
+        }
+        
   		ping(domain, function(result) {
   			
   			var data = JSON.parse(result.response);
