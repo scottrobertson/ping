@@ -29,7 +29,6 @@ chrome.omnibox.onInputEntered.addListener(
 				);
                 
                 notification.show();
-
   			}
 
   		});
