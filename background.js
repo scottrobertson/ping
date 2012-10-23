@@ -15,30 +15,22 @@ chrome.omnibox.onInputEntered.addListener(
   				} else {
   					var title = 'This Website';
   				}
-
-  				var notification = webkitNotifications.createNotification(
-				  'Power.png',  // icon url - can be relative
-				  title + ' is Down',  // notification title
-				  'This website apears to be down. Check www.isup.me for status'  // notification body text
-				);
-                
+               
                 chrome.tabs.create({'url': "http://isup.me/" + domain}, function(tab) {
                     return true;
                 });
-                
-                
-                
+                                
   			} else {
 
   				var notification = webkitNotifications.createNotification(
-				  'Chrome.png',  // icon url - can be relative
-				  data.domain + ' is available',  // notification title
-				  data.ip  // notification body text
+				  'Chrome.png',
+				  data.domain + ' is available',  
+				  data.ip 
 				);
+                
+                notification.show();
 
   			}
-
-			notification.show();
 
   		});
 
