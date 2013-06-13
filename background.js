@@ -23,7 +23,7 @@ chrome.omnibox.onInputEntered.addListener(
   			} else {
 
   				var notification = webkitNotifications.createNotification(
-				  'Chrome.png',
+				  'img/Chrome.png',
 				  data.domain + ' is available',  
 				  data.ip 
 				);
@@ -48,7 +48,7 @@ function ping(domain, callback) {
 
 	var apiKey = '6ad80f62e94579dd6c539176128f9cf2';
 
-	obj.open('get', 'http://scottymeuk.co.uk/api/ping/' + domain + '?apikey=' + apiKey, true);
+	obj.open('get', 'http://scottrobertson.me/api/ping/' + domain + '?apikey=' + apiKey, true);
 	obj.send();
 	return obj; 
 
