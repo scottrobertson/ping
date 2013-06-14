@@ -1,7 +1,7 @@
 {
   "name": "Ping.",
   "description" : "Ping a website from the Chrome Omnibox. Simple type 'ping' and hit tab followed by the domain.",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "background": {
     "page": "background.html"
   },
