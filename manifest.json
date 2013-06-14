@@ -10,7 +10,7 @@
   },
   "manifest_version": 2,
   "permissions": [
-  	"http://*.scottrobertson.me/",
+  	"http://scottymeuk-ping.herokuapp.com/",
   	"notifications",
     "tabs"
   ],
