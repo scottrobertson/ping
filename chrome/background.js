@@ -25,7 +25,7 @@ function ping(domain, callback) {
             callback(obj);
         }
     }
-    obj.open('get', 'http://scottymeuk-ping.herokuapp.com/?domain=' + domain, true);
+    obj.open('get', 'http://scottymeuk-ping.herokuapp.com/index.php?domain=' + domain, true);
     obj.send();
     return obj;
 }
